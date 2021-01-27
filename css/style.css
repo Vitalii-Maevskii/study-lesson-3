@@ -105,14 +105,14 @@ h2 {
 #article_2,
 #article_3,
 #article_4 {
-	color: blue;
+	color: black;
 }
 /* ============================ */
 .main-article__text > p {
-	color: indigo;
+	color: black;
 }
 p ~ p {
-	color: white;
+	color: indigo;
 }
 p + p {
 	color: green;
@@ -136,5 +136,5 @@ footer {
 /* ============================ */
 
 .footer__ankor a {
-	color: chocolate;
+	color: tomato;
 }
