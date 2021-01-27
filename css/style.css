@@ -1,0 +1,140 @@
+/* Стили обнуления ======================================================*/
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+li {
+	list-style: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+/* Основные стили ======================================================*/
+
+/* ============================ */
+/* перебивает ниже записанный селектор звездочка "*" т.к. идет повышенное уточнение  */
+.header__article > p {
+	color: tomato;
+}
+/* ============================ */
+h1 {
+	color: blue;
+}
+header {
+	color: green;
+}
+/* ============================ */
+.navigation__false-item ~ li {
+	/* не сработает т.к. есть инлайн стиль */
+	color: darkorange;
+}
+/* ============================ */
+* {
+	color: yellowgreen;
+}
+.navigation__item {
+	/* не сработает т.к. есть вложенный тег "a" , а мы через селектор "*"  звездочку обращаемся ко всем селекторам */
+	color: white;
+}
+/* ============================ */
+li > a {
+	color: white;
+}
+.navigation__item > a {
+	/* приоритет у селектора класса выше чем у тега  */
+	color: darkblue;
+}
+/* ============================ */
+/* сила селектора на уменьшение inline, id, class, тег */
+
+#article_1 mark {
+	color: blue;
+}
+.main-article__name mark {
+	color: pink;
+}
+h2 mark {
+	color: white;
+}
+
+/* ============================ */
+/* тоже самое, что и примером выше, но c селектором тега по id, который стоит наиболее близко к объекту редактирования 
+находится с ним в одной плоскости  */
+
+#article_2 {
+	color: red;
+}
+.main-article__name mark {
+	color: black;
+}
+h2 {
+	color: white;
+	/* не сработает т.к. выше идет уточнение 
+	.main-article__name mark {
+		color: pink;
+	} */
+}
+/* ============================ */
+
+.main-article__text .class_plus_span {
+	color: saddlebrown;
+}
+.main-article__text span {
+	color: red;
+}
+/* ============================ */
+#article_2,
+#article_3,
+#article_4 {
+	color: blue;
+}
+/* ============================ */
+.main-article__text > p {
+	color: indigo;
+}
+p ~ p {
+	color: white;
+}
+p + p {
+	color: green;
+}
+p {
+	color: green;
+}
+/* ============================ */
+h5 {
+	color: pink;
+}
+.footer__info h5 {
+	color: black;
+}
+.footer {
+	color: red;
+}
+footer {
+	color: blue;
+}
+/* ============================ */
+
+.footer__ankor a {
+	color: chocolate;
+}
